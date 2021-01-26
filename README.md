@@ -44,7 +44,7 @@ dependencies {
 - [x] [Check NFC Hardware (Type 1)](#check-nfc-hardware-type-1).
 - [x] [Start NFC Tagging (Type 1)](#start-nfc-tagging-type-1) Open Dialog And Start Tagging.
 - [x] [Combine CheckNFCHardware and StartNFCTagging (Type 2)](#combine-checknfchardware-and-startnfctagging-type-2) .
-- [x] [End NFC Tagging](#convert-time-format) Get Result.
+- [x] [End NFC Tagging](#end-nfc-tagging) Get Result.
 
 ---
 ## USE
@@ -88,7 +88,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 
 **Note :** Please make sure your divice have **NFC** feature before run `StartNFCTagging();`
 
----
+#
 ### Combine [CheckNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
 ```java
 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
@@ -147,7 +147,7 @@ You can change design of the `Dialog Tagging`.
 
 |<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example1.jpg" width="400"/>|
 |---|
-|Result|
+|Customize Result|
 
 ---
 
