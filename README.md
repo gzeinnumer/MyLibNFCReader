@@ -38,7 +38,7 @@ dependencies {
 ## Feature List
 - [x] [Check NFC Hardware (Type 1)](#check-nfc-hardware-type-1).
 - [x] [Start NFC Tagging (Type 1)](#start-nfc-tagging-type-1) Open Dialog And Start Tagging.
-- [x] [Combine CheckNFCHardware and StartNFCTagging (Type 2)](#combine-checknfchardware-and-startnfctagging-type-2) Open Dialog And Start Tagging.
+- [x] [Combine CheckNFCHardware and StartNFCTagging (Type 2)](#combine-checknfchardware-and-startnfctagging-type-2) .
 - [x] [End NFC Tagging](#convert-time-format) Get Result.
 
 ---
@@ -68,7 +68,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 ```
 
 ---
-### Combine [CheckNFCHardware]() and [StartNFCTagging]() (Type 2)
+### Combine [CheckNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
 ```java
 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
     @Override
