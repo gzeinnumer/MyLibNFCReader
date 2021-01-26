@@ -86,7 +86,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 }
 ```
 
-**Note :** Please make sure your divice have **NFC** feature.
+**Note :** Please make sure your divice have **NFC** feature before run `StartNFCTagging();`
 
 ---
 ### Combine [CheckNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
