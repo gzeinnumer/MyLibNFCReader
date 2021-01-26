@@ -36,14 +36,15 @@ dependencies {
 ```
 
 ## Feature List
-- [x] [Check NFC Hardware](#convert-time-format).
-- [x] [Start NFC Tagging](#convert-time-format) Open Dialog And Start Tagging.
+- [x] [Check NFC Hardware (Type 1)](#check-nfc-hardware-type-1).
+- [x] [Start NFC Tagging (Type 1)](#start-nfc-tagging-type-1) Open Dialog And Start Tagging.
+- [x] [Combine CheckNFCHardware and StartNFCTagging (Type 2)](#combine-checknfchardware-and-startnfctagging-type-2) Open Dialog And Start Tagging.
 - [x] [End NFC Tagging](#convert-time-format) Get Result.
 
 ---
 ## USE
 
-### Check NFC Hardware (Type 1).
+### Check NFC Hardware (Type 1)
 
 use `CheckNFCHardware` will return `true` if NFC available.
 > **Java**
@@ -56,7 +57,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 ```
 
 ---
-### Start NFC Tagging (Type 1).
+### Start NFC Tagging (Type 1)
 
 If device have the NFC write this code
 > **Java**
