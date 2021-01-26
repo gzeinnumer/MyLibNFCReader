@@ -120,9 +120,15 @@ protected void onNewIntent(Intent intent) {
 ```
 
 Preview :
-|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example1.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example2.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example3.jpg" width="300"/>|
-|---|---|---|
-|Dialog Tagging|NFC feature not found in divice|Result|
+|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example1.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example2.jpg" width="300"/>|
+|---|---|
+|Dialog Tagging|NFC feature not found in divice|
+
+|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example3.jpg" width="400"/>|
+|---|
+|Result|
+
+
 ---
 
 ### Customize
