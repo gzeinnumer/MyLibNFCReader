@@ -4,12 +4,20 @@ import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 
-public class NFCBuilder {
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import com.gzeinnumer.mylibnfcreader.lib.TaggingDialog;
+
+public class EndNFCTagging {
     private NFCCallBack nfcCallBack;
     private final Intent intent;
+    private final FragmentManager supportFragmentManager;
 
-    public NFCBuilder(Intent intent) {
+    public EndNFCTagging(Intent intent, FragmentManager supportFragmentManager) {
         this.intent = intent;
+        this.supportFragmentManager = supportFragmentManager;
     }
 
     public void observer(NFCCallBack nfcCallBack) {
@@ -22,6 +30,12 @@ public class NFCBuilder {
         if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)
                 || NfcAdapter.ACTION_TECH_DISCOVERED.equals(action)
                 || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
+
+            Fragment prev = supportFragmentManager.findFragmentByTag(TaggingDialog.TAG);
+            if (prev != null) {
+                DialogFragment df = (DialogFragment) prev;
+                df.dismiss();
+            }
 
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
             String idHex = UtilsConverter.getIdHex(tag);

@@ -1,18 +1,18 @@
 package com.gzeinnumer.mylibnfcreader;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.gzeinnumer.mylibnfcreader.helper.EndNFCTagging;
 import com.gzeinnumer.mylibnfcreader.helper.NFCCallBack;
 import com.gzeinnumer.mylibnfcreader.helper.NFCErrorCallBack;
 import com.gzeinnumer.mylibnfcreader.helper.NFCTool;
 import com.gzeinnumer.mylibnfcreader.lib.StartNFCTagging;
-import com.gzeinnumer.mylibnfcreader.helper.NFCBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        new NFCBuilder(intent).observer(new NFCCallBack() {
+        new EndNFCTagging(intent, getSupportFragmentManager()).observer(new NFCCallBack() {
             @Override
             public void callBack(String idHex, String idReversedHex, String idDec, String idReversedDec) {
                 Log.d(TAG, "checkForm: " + idHex);

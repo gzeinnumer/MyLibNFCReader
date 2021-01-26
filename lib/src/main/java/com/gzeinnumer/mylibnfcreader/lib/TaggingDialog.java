@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,13 @@ import androidx.annotation.Nullable;
 import com.gzeinnumer.mylibdialogfragment.MyLibDialog;
 import com.gzeinnumer.mylibnfcreader.R;
 
-class TaggingDialog extends MyLibDialog {
+public class TaggingDialog extends MyLibDialog {
+
+    public static final String TAG = "TaggingDialog";
 
     private NfcAdapter nfcAdapter;
     private PendingIntent pendingIntent;
-    private Activity activity;
+    private final Activity activity;
 
     public static TaggingDialog newInstance(Activity activity) {
         return new TaggingDialog(activity);
@@ -66,6 +69,8 @@ class TaggingDialog extends MyLibDialog {
             new StartNFCTagging(requireActivity(), null);
         } else {
             nfcAdapter.enableForegroundDispatch(requireActivity(), pendingIntent, null, null);
+            Log.d(TAG, "on_Resume: ");
+
         }
     }
 }
