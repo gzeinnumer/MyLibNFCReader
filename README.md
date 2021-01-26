@@ -32,6 +32,11 @@ allprojects {
 dependencies {
   ...
   implementation 'com.github.gzeinnumer:MyLibNFCReader:version'
+
+  //required
+  implementation 'com.github.gzeinnumer:MyLibDialogFragment:1.0.1'
+  implementation 'com.github.gzeinnumer:MyLibDialog:2.2.1'
+  implementation 'com.github.gzeinnumer:MyLibStyle:0.1.5'
 }
 ```
 
