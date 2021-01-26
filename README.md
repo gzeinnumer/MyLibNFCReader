@@ -69,15 +69,10 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 ---
 ### Combine **CheckNFCHardware** and **StartNFCTagging** (Type 2)
 ```java
-findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
     @Override
-    public void onClick(View v) {
-        new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
-            @Override
-            public void onNotSupport(String msg) {
-                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void onNotSupport(String msg) {
+        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
 });
 ```
@@ -93,10 +88,10 @@ protected void onNewIntent(Intent intent) {
     new EndNFCTagging(intent, getSupportFragmentManager()).observer(new NFCCallBack() {
         @Override
         public void callBack(String idHex, String idReversedHex, String idDec, String idReversedDec) {
-            Log.d(TAG, "checkForm: " + idHex);
-            Log.d(TAG, "checkForm: " + idReversedHex);
-            Log.d(TAG, "checkForm: " + idDec);
-            Log.d(TAG, "checkForm: " + idReversedDec);
+            Log.d(TAG, "onNewIntent: " + idHex);
+            Log.d(TAG, "onNewIntent: " + idReversedHex);
+            Log.d(TAG, "onNewIntent: " + idDec);
+            Log.d(TAG, "onNewIntent: " + idReversedDec);
         }
     });
 }

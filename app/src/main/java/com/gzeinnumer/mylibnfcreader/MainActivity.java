@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         new EndNFCTagging(intent, getSupportFragmentManager()).observer(new NFCCallBack() {
             @Override
             public void callBack(String idHex, String idReversedHex, String idDec, String idReversedDec) {
-                Log.d(TAG, "checkForm: " + idHex);
-                Log.d(TAG, "checkForm: " + idReversedHex);
-                Log.d(TAG, "checkForm: " + idDec);
-                Log.d(TAG, "checkForm: " + idReversedDec);
+                Log.d(TAG, "onNewIntent: " + idHex);
+                Log.d(TAG, "onNewIntent: " + idReversedHex);
+                Log.d(TAG, "onNewIntent: " + idDec);
+                Log.d(TAG, "onNewIntent: " + idReversedDec);
             }
         });
     }
