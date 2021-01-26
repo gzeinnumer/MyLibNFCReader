@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibUtils/blob/master/preview/bg.jpg"/>
+  <img src="https://wallpaperaccess.com/full/1782494.jpg"/>
 </p>
 
 <h1 align="center">
