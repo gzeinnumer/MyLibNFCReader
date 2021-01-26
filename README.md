@@ -123,9 +123,7 @@ protected void onNewIntent(Intent intent) {
 
 ---
 
-Sample Code [Type 1](https://gist.github.com/gzeinnumer/19b3e80a12a2a269a76e66d3d84f68b2)
-
-Sample Code [Type 2](https://gist.github.com/gzeinnumer/78268a43351ebbc593cc55a301ab88c4)
+Sample Code [Type 1](https://gist.github.com/gzeinnumer/19b3e80a12a2a269a76e66d3d84f68b2) & [Type 2](https://gist.github.com/gzeinnumer/78268a43351ebbc593cc55a301ab88c4)
 
 Preview :
 |<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example4.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example2.jpg" width="300"/>|
@@ -165,5 +163,5 @@ You can sent your constibution to `branche` `open-pull`.
 ---
 
 ```
-Copyright 2020 M. Fadli Zein
+Copyright 2021 M. Fadli Zein
 ```
