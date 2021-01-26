@@ -114,6 +114,15 @@ protected void onNewIntent(Intent intent) {
 
 ---
 
+### Customize
+
+You can change design of the `Dialog Tagging`.
+1. Make `default_tagging_dialog.xml` in `res/layout`
+2. Copy this code root [default_tagging_dialog.xml](https://github.com/gzeinnumer/MyLibNFCReader/blob/master/lib/src/main/res/layout/default_tagging_dialog.xml)
+3. Just Customize it
+
+---
+
 ### Version
 - **1.0.0**
   - First Release
