@@ -45,7 +45,7 @@ dependencies {
 
 ### CheckNFCHardware.
 
-use `CheckNFCHardware` will return true if NFC available.
+use `CheckNFCHardware` will return `true` if NFC available.
 > **Java**
 ```java
 if (NFCTool.CheckNFCHardware(MainActivity.this)){
@@ -53,6 +53,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 } else {
     Toast.makeText(this, "NFC Not Support", Toast.LENGTH_SHORT).show();
 }
+```
 
 ### StartNFCTagging.
 
