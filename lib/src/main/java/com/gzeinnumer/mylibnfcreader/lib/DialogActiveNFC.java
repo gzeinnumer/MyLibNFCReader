@@ -18,7 +18,7 @@ class DialogActiveNFC {
                 .setBtnOkTitleColor(ContextCompat.getColor(activity.getApplicationContext(), R.color.colorPrimary))
                 .setBtnCancelTitleColor(ContextCompat.getColor(activity.getApplicationContext(), R.color.colorPrimary))
                 .setTitle("Warning")
-                .setContent("NFC must Active")
+                .setContent("NFC not active, enable NFC now?")
                 .onOkPressedCallBack(new ConfirmDialog.OnOkPressed() {
                     @Override
                     public void onOkPressed() {
