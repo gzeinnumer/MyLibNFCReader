@@ -137,7 +137,7 @@ Preview :
 ---
 
 ### Customize
-
+#
 - Design
 
 You can change design of the `Dialog Tagging`.
@@ -149,6 +149,7 @@ You can change design of the `Dialog Tagging`.
 |---|
 |Customize Result|
 
+#
 - Message
 
 You can change mesage of the `Dialog Tagging`.
