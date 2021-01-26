@@ -58,6 +58,7 @@ dependencies {
 </manifest>
 ```
 
+---
 ### Check NFC Hardware (Type 1)
 
 use `CheckNFCHardware` will return `true` if NFC available.
@@ -70,16 +71,17 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 }
 ```
 
----
 ### Start NFC Tagging (Type 1)
 
-If device have the NFC write this code
+If device have the NFC, run this code
 > **Java**
 ```java
 if (NFCTool.CheckNFCHardware(MainActivity.this)){
     new StartNFCTagging(MainActivity.this);
 }
 ```
+
+**Note : ** Please make sure your divice have **NFC** feature.
 
 ---
 ### Combine [CheckNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
@@ -95,7 +97,7 @@ new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
 ---
 ### End NFC Tagging
 
-`@Override` funcion `onNewIntent` from `AppCompatActivity` in your activity.
+`@Override` funcion `onNewIntent` from `AppCompatActivity` in your activity. and use `EndNFCTagging` to get result.
 ```java
 @Override
 protected void onNewIntent(Intent intent) {
