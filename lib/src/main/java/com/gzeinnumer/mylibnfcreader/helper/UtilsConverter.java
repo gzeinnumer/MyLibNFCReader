@@ -1,7 +1,5 @@
 package com.gzeinnumer.mylibnfcreader.helper;
 
-import android.content.Intent;
-import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 
 public class UtilsConverter {

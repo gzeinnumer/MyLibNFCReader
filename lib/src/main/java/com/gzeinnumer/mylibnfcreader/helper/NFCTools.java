@@ -5,8 +5,8 @@ import android.content.Context;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcManager;
 
-public class NFCTool {
-    public static boolean CheckNFCHardware(Activity activity) {
+public class NFCTools {
+    public static boolean checkNFCHardware(Activity activity) {
         NfcManager manager = (NfcManager) activity.getSystemService(Context.NFC_SERVICE);
         NfcAdapter adapter = manager.getDefaultAdapter();
         if (adapter != null && adapter.isEnabled())

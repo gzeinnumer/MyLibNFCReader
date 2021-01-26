@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.gzeinnumer.mylibnfcreader.helper.EndNFCTagging;
 import com.gzeinnumer.mylibnfcreader.helper.NFCCallBack;
 import com.gzeinnumer.mylibnfcreader.helper.NFCErrorCallBack;
+import com.gzeinnumer.mylibnfcreader.helper.NFCTools;
 import com.gzeinnumer.mylibnfcreader.lib.StartNFCTagging;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        if (NFCTool.CheckNFCHardware(MainActivity.this)){
-//            Toast.makeText(this, "NFC Support", Toast.LENGTH_SHORT).show();
-//            new StartNFCTagging(MainActivity.this);
-//        } else {
-//            Toast.makeText(this, "NFC Not Support", Toast.LENGTH_SHORT).show();
-//        }
+        if (NFCTools.checkNFCHardware(MainActivity.this)) {
+            Toast.makeText(this, "NFC Support", Toast.LENGTH_SHORT).show();
+            new StartNFCTagging(MainActivity.this);
+        } else {
+            Toast.makeText(this, "NFC Not Support", Toast.LENGTH_SHORT).show();
+        }
 
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override

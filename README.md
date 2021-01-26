@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-    MyLibUtils
+    MyLibNFCReader
 </h1>
 
 <p align="center">
@@ -66,10 +66,10 @@ dependencies {
 ---
 ### Check NFC Hardware (Type 1)
 
-use `CheckNFCHardware` will return `true` if NFC available.
+use `checkNFCHardware` will return `true` if NFC available.
 > **Java**
 ```java
-if (NFCTool.CheckNFCHardware(MainActivity.this)){
+if (NFCTools.checkNFCHardware(MainActivity.this)){
     Toast.makeText(this, "NFC Support", Toast.LENGTH_SHORT).show();
 } else {
     Toast.makeText(this, "NFC Not Support", Toast.LENGTH_SHORT).show();
@@ -81,7 +81,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 If device have the NFC, run this code
 > **Java**
 ```java
-if (NFCTool.CheckNFCHardware(MainActivity.this)){
+if (NFCTools.checkNFCHardware(MainActivity.this)){
     new StartNFCTagging(MainActivity.this);
 }
 ```
@@ -89,7 +89,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 **Note :** Please make sure your divice have **NFC** feature before run `StartNFCTagging();`
 
 #
-### Combine [CheckNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
+### Combine [checkNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
 ```java
 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
     @Override

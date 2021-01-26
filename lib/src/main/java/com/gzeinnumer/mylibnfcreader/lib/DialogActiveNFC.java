@@ -2,7 +2,6 @@ package com.gzeinnumer.mylibnfcreader.lib;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.provider.Settings;
 
 import androidx.core.content.ContextCompat;
