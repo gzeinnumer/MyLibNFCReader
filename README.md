@@ -110,15 +110,19 @@ protected void onNewIntent(Intent intent) {
     new EndNFCTagging(intent, getSupportFragmentManager()).observer(new NFCCallBack() {
         @Override
         public void callBack(String idHex, String idReversedHex, String idDec, String idReversedDec) {
-            Log.d(TAG, "onNewIntent: " + idHex);
-            Log.d(TAG, "onNewIntent: " + idReversedHex);
-            Log.d(TAG, "onNewIntent: " + idDec);
-            Log.d(TAG, "onNewIntent: " + idReversedDec);
+            Log.d(TAG, "onNewIntent: Hexadecimal Code          " + idHex);
+            Log.d(TAG, "onNewIntent: Reversed Hexadecimal Code " + idReversedHex);
+            Log.d(TAG, "onNewIntent: Decimal Code              " + idDec);
+            Log.d(TAG, "onNewIntent: Reversed Decimal Code     " + idReversedDec);
         }
     });
 }
 ```
 
+Preview :
+|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example1.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example2.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example3.jpg" width="300"/>|
+|---|---|---|
+|Dialog Tagging|NFC feature not found in divice|Result|
 ---
 
 ### Customize
