@@ -94,10 +94,12 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
     @Override
     public void onNotSupport(String msg) {
+        //if Device not Support NFC
         Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
 });
 ```
+
 
 ---
 ### End NFC Tagging
@@ -119,12 +121,18 @@ protected void onNewIntent(Intent intent) {
 }
 ```
 
+---
+
+Sample Code [Type 1](https://gist.github.com/gzeinnumer/19b3e80a12a2a269a76e66d3d84f68b2)
+
+Sample Code [Type 2](https://gist.github.com/gzeinnumer/19b3e80a12a2a269a76e66d3d84f68b2)
+
 Preview :
 |<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example4.jpg" width="300"/>|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example2.jpg" width="300"/>|
 |---|---|
 |Dialog Tagging|NFC feature not found in divice|
 
-|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example3.jpg" width="400"/>|
+|<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example3.jpg"/>|
 |---|
 |Result|
 

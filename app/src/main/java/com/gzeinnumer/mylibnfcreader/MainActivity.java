@@ -11,22 +11,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.gzeinnumer.mylibnfcreader.helper.EndNFCTagging;
 import com.gzeinnumer.mylibnfcreader.helper.NFCCallBack;
 import com.gzeinnumer.mylibnfcreader.helper.NFCErrorCallBack;
-import com.gzeinnumer.mylibnfcreader.helper.NFCTool;
 import com.gzeinnumer.mylibnfcreader.lib.StartNFCTagging;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String TAG = "Main_Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (NFCTool.CheckNFCHardware(MainActivity.this)){
-            Toast.makeText(this, "NFC Support", Toast.LENGTH_SHORT).show();
-            new StartNFCTagging(MainActivity.this);
-        } else {
-            Toast.makeText(this, "NFC Not Support", Toast.LENGTH_SHORT).show();
-        }
+//        if (NFCTool.CheckNFCHardware(MainActivity.this)){
+//            Toast.makeText(this, "NFC Support", Toast.LENGTH_SHORT).show();
+//            new StartNFCTagging(MainActivity.this);
+//        } else {
+//            Toast.makeText(this, "NFC Not Support", Toast.LENGTH_SHORT).show();
+//        }
 
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
                     @Override
                     public void onNotSupport(String msg) {
+                        //if Device not Support NFC
                         Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -54,7 +56,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    public static final String TAG = "Main_Activity";
 
 }
