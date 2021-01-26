@@ -44,6 +44,20 @@ dependencies {
 ---
 ## USE
 
+### Permission
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest >
+
+    <uses-feature android:name="android.hardware.nfc" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application>
+    </application>
+
+</manifest>
+```
+
 ### Check NFC Hardware (Type 1)
 
 use `CheckNFCHardware` will return `true` if NFC available.
