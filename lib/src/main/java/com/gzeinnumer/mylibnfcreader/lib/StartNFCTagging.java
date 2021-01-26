@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.gzeinnumer.mylibnfcreader.R;
 import com.gzeinnumer.mylibnfcreader.helper.NFCErrorCallBack;
 
 public class StartNFCTagging {
@@ -38,7 +39,7 @@ public class StartNFCTagging {
             //NFC is not supported
 
             if (nfcErrorCallBack != null)
-                nfcErrorCallBack.onNotSupport("Your phone don't have NFC Hardware");
+                nfcErrorCallBack.onNotSupport(activity.getResources().getString(R.string.nfc_reader_msg_no_nfc));
         }
     }
 }

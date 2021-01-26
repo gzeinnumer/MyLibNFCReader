@@ -138,15 +138,30 @@ Preview :
 
 ### Customize
 
+- Design
+
 You can change design of the `Dialog Tagging`.
 1. Make `default_tagging_dialog.xml` in `res/layout`
 2. Copy this code root [default_tagging_dialog.xml](https://github.com/gzeinnumer/MyLibNFCReader/blob/master/lib/src/main/res/layout/default_tagging_dialog.xml)
 3. Just Customize it
 
-
 |<img src="https://github.com/gzeinnumer/MyLibNFCReader/blob/master/preview/example1.jpg" width="400"/>|
 |---|
 |Customize Result|
+
+- Message
+
+You can change mesage of the `Dialog Tagging`.
+1. Add this name to your `strings.xml`
+2. Just Customize it
+
+```xml
+<resources>
+    <string name="nfc_reader_ask_active_sub">NFC not active, enable NFC now?</string>
+    <string name="nfc_reader_ask_active_title">Warning</string>
+    <string name="nfc_reader_msg_no_nfc">Your phone don\'t have NFC Hardware</string>
+</resources>
+```
 
 ---
 
