@@ -5,7 +5,6 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,12 +41,7 @@ public class TaggingDialog extends MyLibDialog {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Error if no NFC found in this device
         nfcAdapter = NfcAdapter.getDefaultAdapter(requireActivity());
-//        if (nfcAdapter == null) {
-//        }
-
-        // Pending Intent
         pendingIntent = PendingIntent.getActivity(requireContext(), 0, new Intent(requireContext(), activity.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
 
     }
@@ -64,13 +58,10 @@ public class TaggingDialog extends MyLibDialog {
     @Override
     public void onResume() {
         super.onResume();
-
         if (!nfcAdapter.isEnabled()) {
             new StartNFCTagging(requireActivity(), null);
         } else {
             nfcAdapter.enableForegroundDispatch(requireActivity(), pendingIntent, null, null);
-            Log.d(TAG, "on_Resume: ");
-
         }
     }
 }
