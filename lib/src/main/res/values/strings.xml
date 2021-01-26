@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyLibNFCReader</string>
+    <string name="error">error</string>
+    <string name="no_nfc">no_nfc</string>
+    <string name="nfc_disabled">NFC must Active</string>
+    <string name="tag">Tag On RFID</string>
+</resources>
