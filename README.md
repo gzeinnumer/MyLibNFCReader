@@ -157,8 +157,10 @@ You can change mesage of the `Dialog Tagging`.
 
 ```xml
 <resources>
-    <string name="nfc_reader_ask_active_sub">NFC not active, enable NFC now?</string>
     <string name="nfc_reader_ask_active_title">Warning</string>
+    <string name="nfc_reader_ask_active_sub">NFC not active, enable NFC now?</string>
+    <string name="nfc_reader_ask_active_ok">Ok</string>
+    <string name="nfc_reader_ask_active_cancel">Cancel</string>
     <string name="nfc_reader_msg_no_nfc">Your phone don\'t have NFC Hardware</string>
 </resources>
 ```

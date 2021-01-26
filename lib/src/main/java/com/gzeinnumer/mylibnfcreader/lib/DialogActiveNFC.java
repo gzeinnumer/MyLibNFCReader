@@ -15,6 +15,8 @@ class DialogActiveNFC {
     public DialogActiveNFC(Activity activity) {
         new ConfirmDialog(((FragmentActivity) activity)
                 .getSupportFragmentManager())
+                .setBtnOkTitle(activity.getResources().getString(R.string.nfc_reader_ask_active_ok))
+                .setBtnCancelTitle(activity.getResources().getString(R.string.nfc_reader_ask_active_cancel))
                 .setBtnOkTitleColor(ContextCompat.getColor(activity.getApplicationContext(), R.color.colorPrimary))
                 .setBtnCancelTitleColor(ContextCompat.getColor(activity.getApplicationContext(), R.color.colorPrimary))
                 .setTitle(activity.getResources().getString(R.string.nfc_reader_ask_active_title))
