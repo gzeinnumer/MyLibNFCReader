@@ -43,7 +43,7 @@ dependencies {
 ---
 ## USE
 
-### CheckNFCHardware.
+### CheckNFCHardware (Type 1).
 
 use `CheckNFCHardware` will return `true` if NFC available.
 > **Java**
@@ -55,21 +55,19 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 }
 ```
 
-### StartNFCTagging.
+---
+### StartNFCTagging (Type 1).
 
 If device have the NFC write this code
 > **Java**
-```java
-new StartNFCTagging(MainActivity.this);
-```
-Example:
 ```java
 if (NFCTool.CheckNFCHardware(MainActivity.this)){
     new StartNFCTagging(MainActivity.this);
 }
 ```
 
-### Combine **CheckNFCHardware** and **StartNFCTagging**
+---
+### Combine **CheckNFCHardware** and **StartNFCTagging** (Type 2)
 ```java
 findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
     @Override
@@ -84,6 +82,7 @@ findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
 });
 ```
 
+---
 ### End NFC Tagging
 
 `@Override` funcion `onNewIntent` from `AppCompatActivity` in your activity.
@@ -91,7 +90,7 @@ findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
 @Override
 protected void onNewIntent(Intent intent) {
     super.onNewIntent(intent);
-    new EndNFCTagging(intent).observer(new NFCCallBack() {
+    new EndNFCTagging(intent, getSupportFragmentManager()).observer(new NFCCallBack() {
         @Override
         public void callBack(String idHex, String idReversedHex, String idDec, String idReversedDec) {
             Log.d(TAG, "checkForm: " + idHex);
