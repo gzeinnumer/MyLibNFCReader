@@ -43,7 +43,7 @@ dependencies {
 ---
 ## USE
 
-### CheckNFCHardware (Type 1).
+### Check NFC Hardware (Type 1).
 
 use `CheckNFCHardware` will return `true` if NFC available.
 > **Java**
@@ -56,7 +56,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 ```
 
 ---
-### StartNFCTagging (Type 1).
+### Start NFC Tagging (Type 1).
 
 If device have the NFC write this code
 > **Java**
@@ -67,7 +67,7 @@ if (NFCTool.CheckNFCHardware(MainActivity.this)){
 ```
 
 ---
-### Combine **CheckNFCHardware** and **StartNFCTagging** (Type 2)
+### Combine [CheckNFCHardware]() and [StartNFCTagging]() (Type 2)
 ```java
 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
     @Override
