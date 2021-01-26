@@ -34,6 +34,7 @@ dependencies {
   implementation 'com.github.gzeinnumer:MyLibNFCReader:version'
 
   //required
+  implementation 'com.google.android.material:material:1.2.1'
   implementation 'com.github.gzeinnumer:MyLibDialogFragment:1.0.1'
   implementation 'com.github.gzeinnumer:MyLibDialog:2.2.1'
   implementation 'com.github.gzeinnumer:MyLibStyle:0.1.5'
@@ -67,7 +68,6 @@ dependencies {
 ### Check NFC Hardware (Type 1)
 
 use `checkNFCHardware` will return `true` if NFC available.
-> **Java**
 ```java
 if (NFCTools.checkNFCHardware(MainActivity.this)){
     Toast.makeText(this, "NFC Support", Toast.LENGTH_SHORT).show();
@@ -79,7 +79,6 @@ if (NFCTools.checkNFCHardware(MainActivity.this)){
 ### Start NFC Tagging (Type 1)
 
 If device have the NFC, run this code
-> **Java**
 ```java
 if (NFCTools.checkNFCHardware(MainActivity.this)){
     new StartNFCTagging(MainActivity.this);
