@@ -85,10 +85,12 @@ if (NFCTools.checkNFCHardware(MainActivity.this)){
 }
 ```
 
-**Note :** Please make sure your divice have **NFC** feature before run `StartNFCTagging();`
+**Note :** Please make sure your divice have **NFC** feature before run `StartNFCTagging();`. **Only For Type 1**.
 
 #
 ### Combine [checkNFCHardware](#check-nfc-hardware-type-1) and [StartNFCTagging](#start-nfc-tagging-type-1) (Type 2)
+
+It's save to run this code even when your device don't have NFC hardware
 ```java
 new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
     @Override
