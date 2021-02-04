@@ -10,14 +10,24 @@
     <a><img src="https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
-    <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Kotlin-Suport-green?logo=kotlin&style=flat"></a>
     <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
     <br>
-    <p>NFC Reader.</p>
+    <p>Simple NFC Reader.</p>
 </p>
 
 ---
-## Download
+# Content List
+* [Download](#download)
+* [Feature List](#feature-list)
+* [Tech stack and 3rd library](#tech-stack-and-3rd-library)
+* [Usage](#usage)
+* [Example Code/App](#example-codeapp)
+* [Version](#version)
+* [Contribution](#contribution)
+
+---
+# Download
 Add maven `jitpack.io` and `dependencies` in `build.gradle (Project)` :
 ```gradle
 // build.gradle project
@@ -41,14 +51,15 @@ dependencies {
 }
 ```
 
-## Feature List
+---
+# Feature List
 - [x] [Check NFC Hardware (Type 1)](#check-nfc-hardware-type-1).
 - [x] [Start NFC Tagging (Type 1)](#start-nfc-tagging-type-1) Open Dialog And Start Tagging.
 - [x] [Combine CheckNFCHardware and StartNFCTagging (Type 2)](#combine-checknfchardware-and-startnfctagging-type-2) .
 - [x] [End NFC Tagging](#end-nfc-tagging) Get Result.
 
 ---
-## USE
+# Usage
 
 ### Permission
 ```xml
@@ -64,7 +75,7 @@ dependencies {
 </manifest>
 ```
 
----
+#
 ### Check NFC Hardware (Type 1)
 
 use `checkNFCHardware` will return `true` if NFC available.
@@ -76,6 +87,7 @@ if (NFCTools.checkNFCHardware(MainActivity.this)){
 }
 ```
 
+#
 ### Start NFC Tagging (Type 1)
 
 If device have the NFC, run this code `new StartNFCTagging(MainActivity.this);`
@@ -101,8 +113,7 @@ new StartNFCTagging(MainActivity.this, new NFCErrorCallBack() {
 });
 ```
 
-
----
+#
 ### End NFC Tagging
 
 `@Override` funcion `onNewIntent` from `AppCompatActivity` in your activity. and use `EndNFCTagging` to get result.
@@ -135,11 +146,9 @@ Preview :
 |---|
 |Result|
 
-
----
-
-### Customize
 #
+### Customize
+
 - Design
 
 You can change design of the `Dialog Tagging`.
@@ -169,15 +178,18 @@ You can change mesage of the `Dialog Tagging`.
 ```
 
 ---
+# Example Code/App
 
-### Version
+[Sample Code And App](https://github.com/gzeinnumer/MyLibNFCReaderExample)
+
+---
+# Version
 - **1.0.0**
   - First Release
 
 ---
-
-### Contribution
-You can sent your constibution to `branche` `open-pull`.
+# Contribution
+You can sent your constibution to `branch` `open-pull`.
 
 ---
 
